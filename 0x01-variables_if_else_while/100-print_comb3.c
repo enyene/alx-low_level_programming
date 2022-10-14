@@ -8,21 +8,26 @@
 
 int main(void)
 {
-	int n, m;
+int n, m;
 
-	for (n = 48; m <= 57; m++)
-	{
-		if (m > n)
-		{
-			putchar(n);
-			putchar(m);
-			if (n != 56 || m != 57)
-			{
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+for (n = 48; m <= 78; n++)
+{
+for (m = n + 1; m <= 78; m++)
+{
+putchar(n);
+putchar(m);
+
+if ((n == 56) && (m == 78))
+{
+break;
+}
+putchar(',');
+putchar(',');
+
+}
+
+}
+putchar('\n');
+return (0);
+
 }
