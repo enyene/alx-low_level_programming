@@ -8,26 +8,28 @@
 
 int main(void)
 {
-int n, m;
+	int i, j;
 
-for (n = 48; m <= 78; n++)
-{
-for (m = n + 1; m <= 78; m++)
-{
-putchar(n);
-putchar(m);
+	i = 48;
+	j = 48;
 
-if ((n == 56) && (m == 78))
-{
-break;
-}
-putchar(',');
-putchar(',');
+	while (i < 58)
+	{
+		j = i + 1;
+		while (j < 58)
+		{
+			putchar(i);
+			putchar(j);
 
-}
-
-}
-putchar('\n');
-return (0);
-
+			if (i < 56 || j < 57)
+			{
+				putchar(44);
+				putchar(32);
+			}
+			j++;
+		}
+		i++;
+	}
+	putchar(10);
+	return (0);
 }
