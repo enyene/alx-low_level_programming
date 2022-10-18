@@ -7,23 +7,23 @@
  */
 int main(void)
 {
-	int i = 0;
-	long j = 1, k = 2;
+	long int i, j, k, next;
 
-	while (i < 50)
+	j = 1;
+	k = 2;
+
+	for (i = 1; i <= 50; ++i)
 	{
-		if (i == 0)
-			printf("%ld", j);
-		else if (i == 1)
-			printf(",%ld ", k);
-		else
+		if (j != 20365011074)
 		{
-			k += j;
-			j = k - j;
-			printf(",%ld ", k);
+			printf("%ld, ", j);
+	} else
+		{
+			printf("%ld\n", j);
 		}
-		++i;
+		next = j + k;
+		j = k;
+		k = next;
 	}
-	printf("\n");
 	return (0);
 }
